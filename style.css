@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8fc;
+    color: #263238;
+}
+
+
+/* Navigation */
+
+nav {
+    background: #235ba8;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hero Section */
+
+.hero {
+    padding: 70px 8%;
+    background: #eaf2ff;
+}
+
+.hero h1 {
+    font-size: 46px;
+    color: #193452;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #596b80;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    background: #235ba8;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: #193f75;
+}
+
+
+/* Sections */
+
+section {
+    padding: 45px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: #193452;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+
+/* Statistics */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(180px, 1fr)
+    );
+
+    gap: 18px;
+}
+
+.stat {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stat h2 {
+    color: #235ba8;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+
+/* Search */
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+#search {
+    flex: 1;
+    min-width: 260px;
+}
+
+input,
+select,
+textarea {
+    padding: 13px;
+    border: 1px solid #ccd6e2;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+
+/* Item Cards */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #193452;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.card p {
+    margin: 8px 0;
+    color: #596b80;
+}
+
+
+/* Status Tags */
+
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-top: 10px;
+    color: white;
+}
+
+.found {
+    background: #239664;
+}
+
+.lost {
+    background: #d24646;
+}
+
+
+/* Report Form */
+
+form {
+    max-width: 720px;
+    margin: auto;
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #193452;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    margin: 8px 0 15px;
+}
+
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: min(420px, 90%);
+}
+
+.modal-box h2 {
+    color: #235ba8;
+    margin-bottom: 12px;
+}
+
+.modal-box p {
+    line-height: 1.5;
+    color: #596b80;
+}
+
+
+/* Footer */
+
+footer {
+    background: #193452;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav h2 {
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin: 0 7px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}

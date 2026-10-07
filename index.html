@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Lost & Found Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+        <h2>Campus Lost & Found</h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#items">Items</a>
+            <a href="#report">Report</a>
+            <a href="#explore">Explore</a>
+        </div>
+    </nav>
+
+
+    <!-- Home Section -->
+
+    <section class="hero" id="home">
+
+        <h1>
+            Find What You Lost.<br>
+            Return What You Found.
+        </h1>
+
+        <p>
+            A simple campus platform to report, search and return
+            lost belongings. Students can easily report lost or
+            found items and search for their belongings.
+        </p>
+
+        <button class="btn" onclick="scrollItems()">
+            Browse Items
+        </button>
+
+    </section>
+
+
+    <!-- Statistics Section -->
+
+    <section id="explore">
+
+        <h2 class="section-title">
+            Quick Overview
+        </h2>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h2>48</h2>
+                <p>Items Reported</p>
+            </div>
+
+            <div class="stat">
+                <h2>31</h2>
+                <p>Items Found</p>
+            </div>
+
+            <div class="stat">
+                <h2>19</h2>
+                <p>Items Returned</p>
+            </div>
+
+            <div class="stat">
+                <h2>24/7</h2>
+                <p>Search Access</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Items Section -->
+
+    <section id="items">
+
+        <h2 class="section-title">
+            Search Lost & Found Items
+        </h2>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search by item name or location..."
+                oninput="filterItems()"
+            >
+
+            <select id="category" onchange="filterItems()">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="Electronics">
+                    Electronics
+                </option>
+
+                <option value="Stationery">
+                    Stationery
+                </option>
+
+                <option value="Personal">
+                    Personal
+                </option>
+
+                <option value="Accessories">
+                    Accessories
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="grid" id="itemGrid"></div>
+
+    </section>
+
+
+    <!-- Report Section -->
+
+    <section id="report">
+
+        <h2 class="section-title">
+            Report an Item
+        </h2>
+
+        <form onsubmit="reportItem(event)">
+
+            <label>Item Name</label>
+
+            <input
+                type="text"
+                id="itemName"
+                placeholder="Example: Black Wallet"
+                required
+            >
+
+            <label>Type</label>
+
+            <select id="itemType">
+
+                <option value="Lost">
+                    Lost
+                </option>
+
+                <option value="Found">
+                    Found
+                </option>
+
+            </select>
+
+            <label>Location</label>
+
+            <input
+                type="text"
+                id="itemLocation"
+                placeholder="Example: Library"
+                required
+            >
+
+            <label>Short Description</label>
+
+            <textarea
+                id="itemDescription"
+                rows="4"
+                placeholder="Enter item details"
+                required
+            ></textarea>
+
+            <button class="btn" type="submit">
+                Submit Report
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Modal -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-box">
+
+            <h2 id="modalTitle">
+                Request Submitted!
+            </h2>
+
+            <p id="modalText">
+                Thank you for using Campus Lost & Found.
+            </p>
+
+            <button class="btn" onclick="closeModal()">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Campus Lost & Found Management System
+        </p>
+
+        <p>
+            Developed using HTML, CSS and JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html> 
